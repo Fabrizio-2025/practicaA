@@ -1,0 +1,14 @@
+<div class="" style="display: flex; flex-direction: column; gap:20px ; align-items: center; width: 450px;">
+  <h2>Ingrese los siguientes datos :</h2>
+  <p-autoComplete class="mr-8" [(ngModel)]="text" placeholder="Ingrese su tarea aqui" [suggestions]="results"
+    (completeMethod)="search($event)"> </p-autoComplete>
+  <p-autoComplete class="mr-8" [(ngModel)]="fecha" placeholder="Ingrese la fecha aqui" [suggestions]="fechasr"
+    (completeMethod)="searchf($event)"> </p-autoComplete>
+  <p-autoComplete class="mr-8" [(ngModel)]="hora" placeholder="Ingrese la hora aqui" [suggestions]="horasr"
+    (completeMethod)="searchh($event)"> </p-autoComplete>
+</div>
+<div class="ml-8">
+<h2 class="mt-3 mb-1"> Activar </h2>
+<p-inputSwitch [(ngModel)]="checked"> </p-inputSwitch>
+</div>
+<app-activity></app-activity>
